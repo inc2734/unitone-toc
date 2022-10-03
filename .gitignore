@@ -1,0 +1,10 @@
+node_modules
+vendor
+*.DS_Store
+/.export/*
+error_log
+dist
+todo.md
+/unitone-toc
+/unitone-toc.zip
+.wp-env.override.json

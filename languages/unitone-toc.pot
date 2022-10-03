@@ -1,0 +1,101 @@
+# Copyright (C) 2022 Takashi Kitajima
+# This file is distributed under the GPL2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: unitone TOC 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/unitone-toc\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-10-03T00:40:23+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: unitone-toc\n"
+
+#. Plugin Name of the plugin
+msgid "unitone TOC"
+msgstr ""
+
+#. Description of the plugin
+msgid "This plugin adds the table of contents block."
+msgstr ""
+
+#. Author of the plugin
+msgid "Takashi Kitajima"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://2inc.org"
+msgstr ""
+
+#: unitone-toc.php:50
+msgid "[unitone TOC] Needs the unitone."
+msgstr ""
+
+#: dist/blocks/toc/index.js:1
+msgid "General"
+msgstr ""
+
+#: dist/blocks/toc/index.js:1
+msgid "Show h2"
+msgstr ""
+
+#: dist/blocks/toc/index.js:1
+msgid "Show h3"
+msgstr ""
+
+#: dist/blocks/toc/index.js:1
+msgid "Show h4"
+msgstr ""
+
+#: dist/blocks/toc/index.js:1
+msgid "Show h5"
+msgstr ""
+
+#: dist/blocks/toc/index.js:1
+msgid "Show h6"
+msgstr ""
+
+#: dist/blocks/toc/index.js:1
+msgid "Move to before 1st heading"
+msgstr ""
+
+#: dist/blocks/toc/index.js:1
+msgid "Enter title here"
+msgstr ""
+
+#: dist/blocks/toc/index.js:1
+msgid "In the actual screen, it is displayed when headings exists on the page."
+msgstr ""
+
+#: dist/blocks/toc/block.json
+msgctxt "block title"
+msgid "Table of contents"
+msgstr ""
+
+#: dist/blocks/toc/block.json
+msgctxt "block description"
+msgid "Displays the table of contents of this page."
+msgstr ""
+
+#: dist/blocks/toc/block.json
+msgctxt "block keyword"
+msgid "toc"
+msgstr ""
+
+#: dist/blocks/toc/block.json
+msgctxt "block style label"
+msgid "Default"
+msgstr ""
+
+#: dist/blocks/toc/block.json
+msgctxt "block style label"
+msgid "1"
+msgstr ""
+
+#: dist/blocks/toc/block.json
+msgctxt "block style label"
+msgid "2"
+msgstr ""
