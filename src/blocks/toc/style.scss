@@ -67,6 +67,7 @@
 			flex: 0 0 auto;
 			counter-increment: wpco;
 			content: counter(wpco);
+			margin-top: .3em;
 			margin-right: var(--unitone--marker-gap);
 			display: flex;
 			height: 2em;
@@ -136,6 +137,7 @@
 			flex: 0 0 auto;
 			counter-increment: wpco;
 			content: counter(wpco);
+			margin-top: .3em;
 			margin-right: var(--unitone--marker-gap);
 			display: flex;
 			height: 2em;
