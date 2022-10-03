@@ -33,20 +33,20 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	} );
 
 	if ( hasToc ) {
-		let offset = 0;
+		const html = document.querySelector( 'html' );
+		const htmlStyle = window.getComputedStyle( html );
+		const defaultScrollPaddingTop =
+			parseInt( htmlStyle.getPropertyValue( 'scroll-padding-top' ) ) || 0;
+		let offset = defaultScrollPaddingTop;
 
-		const header = document.querySelector( '.site-header' );
+		const header = document.querySelector(
+			'.site-header.-header-position\\:fixed'
+		);
 		if ( !! header ) {
 			offset += header.offsetHeight;
 		}
 
-		const adminbar = document.getElementById( 'wpadminbar' );
-		if ( !! header ) {
-			offset += adminbar.offsetHeight;
-		}
-
-		if ( 0 < offset ) {
-			const html = document.querySelector( 'html' );
+		if ( defaultScrollPaddingTop < offset ) {
 			html.style.scrollPaddingTop = `${ offset }px`;
 		}
 	}
