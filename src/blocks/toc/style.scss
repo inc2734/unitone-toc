@@ -67,7 +67,7 @@
 			flex: 0 0 auto;
 			counter-increment: wpco;
 			content: counter(wpco);
-			margin-top: .3em;
+			margin-top: calc(1em * var(--unitone--half-leading) / 2);
 			margin-right: var(--unitone--marker-gap);
 			display: flex;
 			height: 2em;
@@ -137,7 +137,7 @@
 			flex: 0 0 auto;
 			counter-increment: wpco;
 			content: counter(wpco);
-			margin-top: .3em;
+			margin-top: calc(1em * var(--unitone--half-leading) / 2);
 			margin-right: var(--unitone--marker-gap);
 			display: flex;
 			height: 2em;
