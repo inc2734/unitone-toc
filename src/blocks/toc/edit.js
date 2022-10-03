@@ -16,7 +16,7 @@ import { useEffect } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 
 export default function ( { attributes, setAttributes, clientId } ) {
-	const { headings, moveToBefore1stHeading, displayTitle, title, id } =
+	const { headings, displayTitle, title, moveToBefore1stHeading, id } =
 		attributes;
 
 	useEffect( () => {
@@ -38,12 +38,25 @@ export default function ( { attributes, setAttributes, clientId } ) {
 
 	const blockProps = useBlockProps( {
 		className: 'unitone-toc',
+		'data-id': !! id ? id : undefined,
+		'data-unitone-toc-headings': headings,
+		'data-move-to-before-1st-heading': moveToBefore1stHeading,
 	} );
 
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody title={ __( 'General', 'unitone-toc' ) }>
+					<ToggleControl
+						label={ __( 'Display title', 'unitone-toc' ) }
+						checked={ displayTitle }
+						onChange={ ( value ) =>
+							setAttributes( {
+								displayTitle: value,
+							} )
+						}
+					/>
+
 					<CheckboxControl
 						name="headings[]"
 						value="h2"

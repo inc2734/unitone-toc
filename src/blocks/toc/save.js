@@ -1,7 +1,8 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 export default function ( { attributes } ) {
-	const { headings, displayTitle, title, id } = attributes;
+	const { headings, displayTitle, title, moveToBefore1stHeading, id } =
+		attributes;
 
 	return (
 		<div
@@ -9,6 +10,7 @@ export default function ( { attributes } ) {
 				className: 'unitone-toc',
 				'data-id': !! id ? id : undefined,
 				'data-unitone-toc-headings': headings,
+				'data-move-to-before-1st-heading': moveToBefore1stHeading,
 			} ) }
 		>
 			{ displayTitle && (

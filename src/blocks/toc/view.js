@@ -24,9 +24,14 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			entryContent.querySelectorAll( headingsString )
 		);
 
+		const moveToBefore1stHeading =
+			'true' === toc.getAttribute( 'data-move-to-before-1st-heading' )
+				? true
+				: false;
+
 		new ContentsOutline( toc, {
 			headings,
-			moveToBefore1stHeading: true,
+			moveToBefore1stHeading,
 		} );
 
 		hasToc = true;
