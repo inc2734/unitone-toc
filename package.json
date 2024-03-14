@@ -1,7 +1,10 @@
 {
 	"engines": {
-		"node": ">=10.0.0",
-		"npm": ">=6.9.0 <7"
+		"node": ">=20.10.0",
+		"npm": ">=10.2.3"
+	},
+	"volta": {
+		"node": "20.11.1"
 	},
 	"devDependencies": {
 		"@inc2734/contents-outline": "^0.1.5",
