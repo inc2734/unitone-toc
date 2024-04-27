@@ -30,7 +30,7 @@ class Bootstrap {
 	 * Constructor.
 	 */
 	public function __construct() {
-		add_action( 'plugins_loaded', [ $this, '_bootstrap' ] );
+		add_action( 'plugins_loaded', array( $this, '_bootstrap' ) );
 	}
 
 	/**
@@ -43,7 +43,7 @@ class Bootstrap {
 		if ( 'unitone' !== $theme->template ) {
 			add_action(
 				'admin_notices',
-				function() {
+				function () {
 					?>
 					<div class="notice notice-warning is-dismissible">
 						<p>
@@ -58,7 +58,7 @@ class Bootstrap {
 
 		require UNITONE_TOC_PATH . '/inc/updater.php';
 
-		add_action( 'init', [ $this, '_register_blocks' ] );
+		add_action( 'init', array( $this, '_register_blocks' ) );
 	}
 
 	/**
@@ -70,5 +70,5 @@ class Bootstrap {
 	}
 }
 
-require_once( __DIR__ . '/vendor/autoload.php' );
+require_once __DIR__ . '/vendor/autoload.php';
 new \UnitoneToc\Bootstrap();

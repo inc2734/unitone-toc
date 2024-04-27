@@ -10,14 +10,14 @@ use Unitone\App\Controller\Manager;
 
 add_action(
 	'init',
-	function() {
+	function () {
 		new Updater(
 			plugin_basename( UNITONE_TOC_PATH . '/unitone-toc.php' ),
 			'inc2734',
 			'unitone-toc',
-			[
+			array(
 				'homepage' => 'https://unitone.2inc.org',
-			]
+			)
 		);
 	}
 );
@@ -27,9 +27,10 @@ add_action(
  */
 add_action(
 	'admin_init',
-	function() {
-		if ( is_admin() && current_user_can( 'administrator' ) ) {
-			if ( ! empty( $_GET['force-check'] ) ) {
+	function () {
+		if ( is_admin() && current_user_can( 'update_core' ) ) {
+			$force_check = filter_input( INPUT_GET, 'force-check' );
+			if ( ! empty( $force_check ) ) {
 				set_site_transient( 'update_plugins', null );
 			}
 		}
@@ -45,7 +46,7 @@ add_action(
  */
 add_filter(
 	'inc2734_github_plugin_updater_zip_url_inc2734/unitone-toc',
-	function( $url ) {
+	function ( $url ) {
 		if ( 0 !== strpos( $url, 'https://unitone.2inc.org/' ) ) {
 			return false;
 		}
@@ -62,7 +63,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_github_plugin_updater_request_url_inc2734/unitone-toc',
-	function() {
+	function () {
 		$license_key = Manager::get_option( 'license-key' );
 		return sprintf(
 			'https://unitone.2inc.org/wp-json/unitone-license-manager/v1/update/%1$s?repository=unitone-toc',
