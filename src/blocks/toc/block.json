@@ -43,6 +43,9 @@
 			"label": "2"
 		}
 	],
+	"selectors": {
+		"root": ".unitone-toc"
+	},
 	"supports": {
 		"className": false,
 		"anchor": true,
