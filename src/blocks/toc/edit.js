@@ -20,7 +20,10 @@ export default function ( { attributes, setAttributes, clientId } ) {
 		attributes;
 
 	useEffect( () => {
-		if ( !! id ) return;
+		if ( !! id ) {
+			return;
+		}
+
 		setAttributes( { id: clientId } );
 	}, [ clientId ] );
 
