@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin name: unitone TOC
- * Version: 0.1.1
- * Tested up to: 6.5
- * Requires at least: 6.0
+ * Version: 1.0.0
+ * Tested up to: 6.6
+ * Requires at least: 6.6
  * Requires PHP: 7.4
  * Description: This plugin adds the table of contents block.
  * Author: Takashi Kitajima
