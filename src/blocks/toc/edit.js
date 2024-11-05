@@ -51,6 +51,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 			<InspectorControls>
 				<PanelBody title={ __( 'General', 'unitone-toc' ) }>
 					<ToggleControl
+						__nextHasNoMarginBottom
 						label={ __( 'Display title', 'unitone-toc' ) }
 						checked={ displayTitle }
 						onChange={ ( value ) =>
@@ -61,6 +62,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					/>
 
 					<CheckboxControl
+						__nextHasNoMarginBottom
 						name="headings[]"
 						value="h2"
 						label={ __( 'Show h2', 'unitone-toc' ) }
@@ -78,6 +80,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					/>
 
 					<CheckboxControl
+						__nextHasNoMarginBottom
 						name="headings[]"
 						value="h3"
 						label={ __( 'Show h3', 'unitone-toc' ) }
@@ -95,6 +98,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					/>
 
 					<CheckboxControl
+						__nextHasNoMarginBottom
 						name="headings[]"
 						value="h4"
 						label={ __( 'Show h4', 'unitone-toc' ) }
@@ -112,6 +116,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					/>
 
 					<CheckboxControl
+						__nextHasNoMarginBottom
 						name="headings[]"
 						value="h5"
 						label={ __( 'Show h5', 'unitone-toc' ) }
@@ -129,6 +134,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					/>
 
 					<CheckboxControl
+						__nextHasNoMarginBottom
 						name="headings[]"
 						value="h6"
 						label={ __( 'Show h6', 'unitone-toc' ) }
@@ -146,6 +152,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 					/>
 
 					<ToggleControl
+						__nextHasNoMarginBottom
 						label={ __(
 							'Move to before 1st heading',
 							'unitone-toc'
