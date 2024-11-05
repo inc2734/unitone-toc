@@ -8,8 +8,8 @@
 	},
 	"devDependencies": {
 		"@inc2734/contents-outline": "^0.1.6",
-		"@wordpress/env": "^10.8.0",
-		"@wordpress/scripts": "^30.0.2",
+		"@wordpress/env": "^10.11.0",
+		"@wordpress/scripts": "^30.4.0",
 		"autoprefixer": "^10.4.20",
 		"classnames": "^2.5.1",
 		"cpy-cli": "^5.0.0",

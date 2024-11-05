@@ -37,7 +37,7 @@ class Bootstrap {
 	 * Bootstrap.
 	 */
 	public function _bootstrap() {
-		load_plugin_textdomain( 'unitone-toc', false, basename( __DIR__ ) . '/languages' );
+		require UNITONE_TOC_PATH . '/inc/updater.php';
 
 		$theme = wp_get_theme( get_template() );
 		if ( 'unitone' !== $theme->template ) {
@@ -56,17 +56,8 @@ class Bootstrap {
 			return;
 		}
 
-		require UNITONE_TOC_PATH . '/inc/updater.php';
-
-		add_action( 'init', array( $this, '_register_blocks' ) );
-	}
-
-	/**
-	 * Register blocks.
-	 */
-	public function _register_blocks() {
-		register_block_type( UNITONE_TOC_PATH . '/dist/blocks/toc' );
-		wp_set_script_translations( 'unitone-toc-toc-editor-script', 'unitone-toc', UNITONE_TOC_PATH . '/languages' );
+		require UNITONE_TOC_PATH . '/inc/i18n.php';
+		require UNITONE_TOC_PATH . '/inc/blocks.php';
 	}
 }
 
