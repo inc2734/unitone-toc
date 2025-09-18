@@ -1,4 +1,5 @@
 {
+	"name": "inc2734/unitone-toc",
 	"type": "wordpress-plugin",
 	"license": "GPL-2.0-or-later",
 	"authors": [
@@ -25,8 +26,13 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"UnitoneToc\\": ""
-		}
+			"UnitoneToc\\": "./"
+		},
+		"exclude-from-classmap": [
+			"unitone-toc.php",
+			"node_modules/",
+			"tests/"
+		]
 	},
 	"config": {
 		"allow-plugins": {
