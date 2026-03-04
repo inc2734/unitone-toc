@@ -63,11 +63,37 @@ add_filter(
  */
 add_filter(
 	'inc2734_github_plugin_updater_request_url_inc2734/unitone-toc',
-	function () {
-		$license_key = Manager::get_option( 'license-key' );
-		return sprintf(
-			'https://unitone.2inc.org/wp-json/unitone-license-manager/v1/update/%1$s?repository=unitone-toc',
-			esc_attr( $license_key )
+	function ( $url, $user_name, $repository, $version ) {
+		return add_query_arg(
+			array(
+				'repository' => 'unitone-toc',
+				'version'    => (string) $version,
+			),
+			'https://unitone.2inc.org/wp-json/unitone-license-manager/v1/update/'
 		);
-	}
+	},
+	10,
+	4
+);
+
+add_filter(
+	'inc2734_github_plugin_updater_requester_args',
+	function ( $args, $url, $user_name, $repository ) {
+		if ( 'inc2734' !== $user_name || 'unitone-toc' !== $repository ) {
+			return $args;
+		}
+
+		$license_key = Manager::get_option( 'license-key' );
+		$headers     = isset( $args['headers'] ) && is_array( $args['headers'] )
+			? $args['headers']
+			: array();
+
+		$headers['X-Unitone-License-Key'] = (string) $license_key;
+
+		$args['headers'] = $headers;
+
+		return $args;
+	},
+	10,
+	4
 );
