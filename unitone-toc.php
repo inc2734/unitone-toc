@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin name: unitone TOC
- * Version: 1.0.8
+ * Version: 1.0.9
  * Tested up to: 6.9
  * Requires at least: 6.7
  * Requires PHP: 7.4
