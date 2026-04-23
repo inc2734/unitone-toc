@@ -25,7 +25,7 @@ export default function ( { attributes, setAttributes, clientId } ) {
 		}
 
 		setAttributes( { id: clientId } );
-	}, [ clientId ] );
+	}, [ clientId, id, setAttributes ] );
 
 	const _generateNewHeadings = ( isChecked, heading ) => {
 		let newHeadings = headings.split( ',' );
