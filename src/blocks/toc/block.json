@@ -49,6 +49,7 @@
 	"supports": {
 		"className": false,
 		"anchor": true,
+		"customCSS": false,
 		"color": {
 			"background": true,
 			"color": true,
@@ -71,7 +72,8 @@
 			}
 		},
 		"unitone": {
-			"padding": true
+			"padding": true,
+			"style": true
 		}
 	},
 	"category": "unitone/component",
