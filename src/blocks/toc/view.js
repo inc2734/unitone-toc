@@ -44,11 +44,19 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			parseInt( htmlStyle.getPropertyValue( 'scroll-padding-top' ) ) || 0;
 		let offset = defaultScrollPaddingTop;
 
-		const header = document.querySelector(
+		// Deprecated
+		const header_v1 = document.querySelector(
 			'.site-header.-header-position\\:fixed'
 		);
-		if ( !! header ) {
-			offset += header.offsetHeight;
+		if ( !! header_v1 ) {
+			offset += header_v1.offsetHeight;
+		}
+
+		const header_v2 = document.querySelector(
+			'.site-header :is([data-unitone-layout~="-position:sticky"], [data-unitone-layout~="-position:sticky-top-admin-bar"], [data-unitone-layout~="-position:fixed"], [data-unitone-layout~="-position:fixed-top-admin-bar"])'
+		);
+		if ( !! header_v2 ) {
+			offset += header_v2.offsetHeight;
 		}
 
 		if ( defaultScrollPaddingTop < offset ) {
