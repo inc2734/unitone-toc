@@ -20,8 +20,20 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			return;
 		}
 
+		const headingsSelector = headingsString
+			.split( ',' )
+			.map( ( selector ) => {
+				const heading = selector.trim();
+				const match = heading.match( /^h([1-6])$/i );
+
+				return match
+					? `${ heading },[role="heading"][aria-level="${ match[ 1 ] }"]`
+					: heading;
+			} )
+			.join( ',' );
+
 		const headings = [].slice.call(
-			entryContent.querySelectorAll( headingsString )
+			entryContent.querySelectorAll( headingsSelector )
 		);
 
 		const moveToBefore1stHeading =

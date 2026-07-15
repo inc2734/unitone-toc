@@ -7,7 +7,7 @@
 		"node": "24.14.1"
 	},
 	"devDependencies": {
-		"@inc2734/contents-outline": "^0.1.9",
+		"@inc2734/contents-outline": "^0.2.0",
 		"@wordpress/env": "^11.4.0",
 		"@wordpress/scripts": "^32.0.0",
 		"autoprefixer": "^10.5.0",
