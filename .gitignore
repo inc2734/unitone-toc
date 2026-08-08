@@ -8,3 +8,4 @@ todo.md
 /unitone-toc
 /unitone-toc.zip
 .wp-env.override.json
+.phpunit.result.cache
