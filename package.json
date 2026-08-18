@@ -55,7 +55,7 @@
 		"posttest:php:unit": "wp-env stop --config=.wp-env.tests.json",
 		"test:php": "run-s test:php:*",
 		"test": "run-s test:*",
-		"zip:pack": "rimraf unitone unitone-toc.zip && rsync -a --exclude='.*' --exclude='*.log' --exclude='error_log' --exclude='todo.md' --exclude='*.config.js' --exclude='/bin' --exclude='/node_modules' --exclude='/vendor' --exclude='/tests' --exclude='/src' --exclude='/unitone-toc.zip' ./ unitone-toc",
+		"zip:pack": "rimraf unitone unitone-toc.zip && rsync -a --exclude='.*' --exclude='*.log' --exclude='error_log' --exclude='todo.md' --exclude='*.config.js' --exclude='/eslint.config.*' --exclude='/bin' --exclude='/node_modules' --exclude='/vendor' --exclude='/tests' --exclude='/src' --exclude='/unitone-toc.zip' ./ unitone-toc",
 		"zip:archive": "zip -9 -qmr unitone-toc.zip unitone-toc",
 		"zip": "npm run zip:pack && wp-env start && npm run composer install -- --no-dev -d unitone-toc && npm run zip:archive",
 		"make-pot": "npm run wp i18n -- make-pot . ./languages/unitone-toc.pot --exclude=.*,src",
