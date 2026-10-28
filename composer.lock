@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d19ff2d3f545a4f19ceed248b38fc4af",
+    "content-hash": "d0ba0289ba36060d0b06e087b58de264",
     "packages": [
         {
             "name": "erusev/parsedown",
@@ -64,16 +64,16 @@
         },
         {
             "name": "inc2734/wp-github-plugin-updater",
-            "version": "3.1.17",
+            "version": "3.1.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-github-plugin-updater.git",
-                "reference": "697604eec2ccfebf3cde87afb3836ab892f889f3"
+                "reference": "5844aeb4711199952ef2ce4a083ab5520282a08d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-github-plugin-updater/zipball/697604eec2ccfebf3cde87afb3836ab892f889f3",
-                "reference": "697604eec2ccfebf3cde87afb3836ab892f889f3",
+                "url": "https://api.github.com/repos/inc2734/wp-github-plugin-updater/zipball/5844aeb4711199952ef2ce4a083ab5520282a08d",
+                "reference": "5844aeb4711199952ef2ce4a083ab5520282a08d",
                 "shasum": ""
             },
             "require": {
@@ -83,8 +83,9 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
                 "phpcompatibility/phpcompatibility-wp": "*",
-                "wp-coding-standards/wpcs": "^3.1",
-                "yoast/phpunit-polyfills": "^1.1"
+                "phpunit/phpunit": "^9.6",
+                "wp-coding-standards/wpcs": "^3.4.1",
+                "yoast/phpunit-polyfills": "^2.0"
             },
             "type": "library",
             "autoload": {
@@ -105,9 +106,9 @@
             "description": "A library for WordPress that automatic plugin updater with GitHub API.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-github-plugin-updater/issues",
-                "source": "https://github.com/inc2734/wp-github-plugin-updater/tree/3.1.17"
+                "source": "https://github.com/inc2734/wp-github-plugin-updater/tree/3.1.18"
             },
-            "time": "2026-08-03T02:14:44+00:00"
+            "time": "2026-10-26T02:33:06+00:00"
         }
     ],
     "packages-dev": [

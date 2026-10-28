@@ -5,6 +5,9 @@ const wpPackagesRegExp = '^@wordpress/(?!(icons|interface|style-engine))';
 module.exports = [
 	...defaultConfig,
 	{
+		ignores: [ 'dist/**', '.export/**', '.themes/**', 'unitone-toc/**' ],
+	},
+	{
 		files: [ '**/*.js', '**/*.jsx' ],
 		rules: {
 			'import/no-extraneous-dependencies': 'off',

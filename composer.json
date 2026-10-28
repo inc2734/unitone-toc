@@ -18,9 +18,9 @@
 	},
 	"require": {
 		"php": ">=7.4",
-		"inc2734/wp-github-plugin-updater": "^3.1"
+		"inc2734/wp-github-plugin-updater": "^3.1.18"
 	},
-	"scripts" :{
+	"scripts": {
 		"format": "phpcbf --standard=.phpcs.xml.dist --report-summary --report-source",
 		"lint": "phpcs --standard=.phpcs.xml.dist",
 		"install-theme": "rm -rf ./.themes && mkdir ./.themes && wget -P ./.themes https://github.com/inc2734/unitone/archive/main.zip && unzip -o -qq ./.themes/main.zip -d ./.themes && mv ./.themes/unitone-main ./.themes/unitone && cd .themes/unitone && composer install --no-dev"

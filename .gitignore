@@ -9,3 +9,5 @@ todo.md
 /unitone-toc.zip
 .wp-env.override.json
 .phpunit.result.cache
+.wp-env.tests.override.json
+.themes
